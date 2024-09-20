@@ -34,8 +34,8 @@ export default function RootLayout({
       >
         <div className='flex flex-col'>
           <Header />
-          {/* <Sidebar /> */}
-          <div className='px-4 flex flex-1 min-h-screen w-full'>{children}</div>
+          {/* <Sidebar />  className='px-4 flex flex-1 min-h-screen w-full'*/}
+          <div >{children}</div>
           <SiteFooter />
         </div>
       </body>

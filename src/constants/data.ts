@@ -61,6 +61,8 @@ export type MainMenuItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;
 
+export const HEADER_TITLE = "Arvasit";
+
 export const navItems = {
   teams: [
     {

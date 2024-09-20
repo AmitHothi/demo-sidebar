@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header
       className='sticky px-2.5 top-0 z-40 mb-2 flex h-16 w-full justify-between
-        border-b-2 bg-background/90 backdrop-blur-sm duration-slow items-center
+        border-b-2 bg-background/90 backdrop-blur-md duration-slow items-center
         animate-in fade-in slide-in-from-top-full'
     >
       {/* <div className={cn('block lg:!hidden')}>
@@ -23,10 +23,10 @@ export default function Header() {
         <div className='inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-background shadow-sm hover:bg-accent hover:text-accent-foreground size-9 relative border'>
           <ShoppingCart className='h-4 w-4' />
         </div>
-        <div className='inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 space-x-1'>
+        {/* <div className='inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 space-x-1'>
           <Coffee className='size-4' />
           <span className='md:flex hidden'>Donut</span>
-        </div>
+        </div> */}
         <div className='inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:bg-accent hover:text-accent-foreground size-9 rounded-lg border'>
           <Sun className='h-4 w-4' />
         </div>

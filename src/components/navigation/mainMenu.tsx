@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { MainMenuItem } from '@/constants/data';
+import { HEADER_TITLE, MainMenuItem } from '@/constants/data';
 import { Store } from 'lucide-react';
 
 type MainMenuProps = {
@@ -40,7 +40,7 @@ export function MainMenu({ items }: MainMenuProps) {
             text-sm
           `}
         >
-          E-commerce
+          {HEADER_TITLE}
         </span>
       </Link>
       <NavigationMenu>
@@ -72,7 +72,7 @@ export function MainMenu({ items }: MainMenuProps) {
                         href='/about'
                       >
                         <div className='mb-2 mt-4 text-lg font-medium'>
-                          Arvasit
+                          {HEADER_TITLE}
                         </div>
                         <p
                           className={`
