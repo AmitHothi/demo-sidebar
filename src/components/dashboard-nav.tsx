@@ -75,10 +75,10 @@ DashboardNavProps) {
         <Popover open={isSearchOpen} onOpenChange={setIsSearchOpen}>
           <PopoverTrigger asChild>
             <button
-              className='flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-gray-500'
+              className='flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm dark:hover:bg-gray-500 hover:bg-muted-foreground'
               onClick={() => setIsSearchOpen(true)}
             >
-              <Search className='h-5 w-5' />
+              <Search className='size-5 shrink-0' />
               {!isMinimized && <span>Search</span>}
             </button>
           </PopoverTrigger>
@@ -111,14 +111,14 @@ DashboardNavProps) {
                     <TooltipTrigger asChild>
                       <AccordionTrigger
                         className={cn(
-                          'flex items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-gray-500 hover:no-underline',
+                          'flex items-center gap-2 rounded-md px-2 py-1.5 text-sm dark:hover:bg-gray-500 hover:bg-muted-foreground hover:no-underline',
                           path.startsWith(item.url)
-                            ? 'bg-gray-500'
+                            ? 'dark:bg-gray-500 bg-neutral-200'
                             : 'transparent'
                         )}
                       >
-                        <div className='flex gap-2'>
-                          <item.icon className='h-4 w-4 shrink-0' />
+                        <div className='flex gap-2 items-center'>
+                          <item.icon className='size-5  shrink-0' />
                           {!isMinimized && <span>{item.title}</span>}
                         </div>
                       </AccordionTrigger>
@@ -134,15 +134,15 @@ DashboardNavProps) {
                           key={subItem.url}
                           href={subItem.url}
                           className={cn(
-                            'flex items-center gap-2 rounded-md px-2 py-1 text-sm hover:bg-gray-500',
-                            path === subItem.url ? 'bg-gray-500' : 'transparent'
+                            'flex items-center gap-2 rounded-md px-2 py-1.5 text-sm dark:hover:bg-gray-500 hover:bg-muted-foreground',
+                            path === subItem.url ? 'dark:bg-gray-500 bg-muted-foreground' : 'transparent'
                           )}
                           onClick={() => {
                             if (setOpen) setOpen(false);
                           }}
                         >
                           {subItem.icon && (
-                            <subItem.icon className='h-5 w-5 shrink-0' />
+                            <subItem.icon className='size-4 shrink-0' />
                           )}
                           <span>{subItem.title}</span>
                         </Link>
@@ -156,15 +156,15 @@ DashboardNavProps) {
                   <Link
                     href={item.url}
                     className={cn(
-                      'flex items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-gray-500',
-                      path === item.url ? 'bg-gray-500' : 'transparent',
+                      'flex items-center gap-2 rounded-md px-2 py-1.5 text-sm dark:hover:bg-gray-500 hover:bg-muted-foreground',
+                      path === item.url ? 'dark:bg-gray-500 bg-muted-foreground' : 'transparent',
                       isMinimized ? 'w-fit' : 'w-full'
                     )}
                     onClick={() => {
                       if (setOpen) setOpen(false);
                     }}
                   >
-                    <item.icon className='h-5 w-5 shrink-0' />
+                    <item.icon className='size-5 shrink-0' />
                     {!isMinimized && <span>{item.title}</span>}
                   </Link>
                 </TooltipTrigger>

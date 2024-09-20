@@ -37,7 +37,7 @@ export function NavUser({
           isMobileNav ? 'w-full p-0 ' : 'w-full '
         }`}
       >
-        <div className='text-sm flex text-left transition-all hover:bg-gray-500 data-[state=open]:bg-gray-500'>
+        <div className='text-sm py-1 flex text-left transition-all rounded-md hover:bg-muted-foreground data-[state=open]:bg-gray-500'>
           {isMinimized ? (
             <Avatar className='h-7 w-7 rounded-md border'>
               <AvatarImage
@@ -70,12 +70,12 @@ export function NavUser({
                 </AvatarFallback>
               </Avatar>
               <div className='grid flex-1 leading-none'>
-                <div className='text-white'>{user.name}</div>
-                <div className='overflow-hidden text-xs text-gray-300'>
+                <div>{user.name}</div>
+                <div className='overflow-hidden text-xs'>
                   <div className='line-clamp-1'>{user.email}</div>
                 </div>
               </div>
-              <ChevronsUpDown className='ml-auto mr-0.5 h-4 w-4 text-gray-300' />
+              <ChevronsUpDown className='ml-auto mr-0.5 h-4 w-4' />
             </div>
           )}
         </div>

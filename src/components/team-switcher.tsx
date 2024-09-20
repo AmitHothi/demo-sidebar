@@ -32,18 +32,18 @@ export function TeamSwitcher({
     <DropdownMenu>
       <DropdownMenuTrigger className='focus:outline-none w-full rounded-md'>
         <div
-          className={`flex border-b px-2.5 py-2  items-center
+          className={`flex border-b border-b-gray-300 px-2.5 py-2  items-center
            text-sm `}
           //  ${ isMobileNav || isMinimized ? 'justify-center' : 'justify-between w-full'}
         >
           <div
             className={cn(
-              'flex items-center justify-between rounded-md w-full px-2 py-1.5 gap-2 hover:bg-gray-500 data-[state=open]:bg-gray-500',
+              'flex items-center justify-between text-foreground rounded-md w-full px-2 py-1.5 gap-2 dark:hover:bg-gray-500 hover:bg-muted-foreground data-[state=open]:bg-gray-500',
               isMinimized ? 'w-fit' : 'w-full'
             )}
           >
             <div className='flex gap-2 items-center'>
-              <div className='flex h-5 w-5 items-center justify-center bg-primary text-primary-foreground'>
+              <div className='flex h-5 w-5 items-center justify-center bg-background border'>
                 <activeTeam.logo className='h-3.5 w-3.5 shrink-0' />
               </div>
               {/* {!isMinimized && (
@@ -56,7 +56,7 @@ export function TeamSwitcher({
               )}
             </div>
             {!isMinimized && (
-              <ChevronsUpDown className='h-4 w-4 text-gray-300' />
+              <ChevronsUpDown className='size-4' />
             )}
           </div>
         </div>

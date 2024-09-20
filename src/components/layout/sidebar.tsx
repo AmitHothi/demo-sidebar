@@ -23,7 +23,7 @@ export default function Sidebar({ className }: SidebarProps) {
   return (
     <aside
       className={cn(
-        `relative  hidden h-screen  border-r bg-zinc-700 dark:bg-gray-900 transition-[width]  md:flex flex-col`,
+        `relative  hidden h-screen  border-r bg-background dark:bg-background transition-[width]  md:flex flex-col`,
         !isMinimized ? 'w-72' : 'w-[58px]',
         className
       )}
@@ -33,7 +33,7 @@ export default function Sidebar({ className }: SidebarProps) {
       </div>
       <ChevronLeft
         className={cn(
-          'absolute -right-3 top-1/2 z-50  cursor-pointer rounded-full border bg-white text-3xl text-black',
+          'absolute -right-3 top-1/2 z-20  cursor-pointer rounded-full border bg-red-500 dark:bg-white text-3xl',
           isMinimized && 'rotate-180'
         )}
         onClick={handleToggle}
@@ -41,9 +41,9 @@ export default function Sidebar({ className }: SidebarProps) {
       <ScrollArea>
         <DashboardNav items={navItems.navMain} />
       </ScrollArea>
-      <div className='hidden lg:block mt-auto'>
+      {/* <div className='hidden lg:block mt-auto'>
         <NavUser user={navItems.user} />
-      </div>
+      </div> */}
     </aside>
   );
 }
